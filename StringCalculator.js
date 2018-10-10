@@ -9,8 +9,20 @@ function add (number){
         for(var i=0; i < numberArray.length ; i++){
             total += parseInt(numberArray[i]);
         }
+        if(number.includes("-"))
+        {
+            var negatives = [];
+            for(var i=0; i < numberArray.length ; i++)
+            {
+                if(numberArray[i] < 0)
+                {
+                    negatives += " " + numberArray[i]
+                }
+            }
+            throw "Negatives not allowed:" + negatives.toString();
+        }
         return total;
-    }  
+    } 
     else
         return parseInt(number);
 }

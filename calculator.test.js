@@ -19,3 +19,9 @@ it("should return sum of all numbers in the string", () => {
 it("should return sum of all numbers in the string", () => {
     expect(add("1,2n3 4n5")).toBe(15);
 });
+
+it("should throw an exception", () => {
+    expect(() => {
+        add("1,-5 -4 4,3-,-4 0");
+    }).toThrow();
+});
