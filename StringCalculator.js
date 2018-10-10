@@ -7,7 +7,15 @@ function add (number){
         var numberArray = number.split(/,| |n/)
         var total = 0;
         for(var i=0; i < numberArray.length ; i++){
-            total += parseInt(numberArray[i]);
+            if(numberArray[i]>1000)
+            {
+                continue;
+            }
+            else
+            {
+                total += parseInt(numberArray[i]);
+            }
+
         }
         if(number.includes("-"))
         {

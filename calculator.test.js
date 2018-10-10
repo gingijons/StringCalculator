@@ -25,3 +25,7 @@ it("should throw an exception", () => {
         add("-2,2,-1 -77 -7");
     }).toThrow();
 });
+
+it("should omit all numbers greater than 1000", () => {
+    expect(add("1,2n3 4n5,1003,1000")).toBe(1015);
+});
