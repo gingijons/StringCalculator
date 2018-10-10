@@ -11,3 +11,7 @@ it("should return the sum of the numbers in the string", () => {
 it("should return zero on empty string", () => {
     expect(add("")).toBe(0);
 });
+
+it("should return sum of all numbers in the string", () => {
+    expect(add("1,2,3,4,5")).toBe(15);
+});

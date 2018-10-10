@@ -4,11 +4,15 @@ function add (number){
     
     if(number.includes(","))  
     {
-        var numberarray = number.split(",")
-        return parseInt(numberarray[0]) + parseInt(numberarray[1]);
+        var numberArray = number.split(",")
+        var total = 0;
+        for(var i=0; i < numberArray.length ; i++){
+            total += parseInt(numberArray[i]);
+        }
+        return total;
     }  
     else
-        return parseInt(number)
+        return parseInt(number);
 }
 
 module.exports = add;
