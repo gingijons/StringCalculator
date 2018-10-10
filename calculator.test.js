@@ -29,3 +29,7 @@ it("should throw an exception", () => {
 it("should omit all numbers greater than 1000", () => {
     expect(add("1,2n3 4n5,1003,1000")).toBe(1015);
 });
+
+it("should use given delimiter", () => {
+    expect(add("//;\n1;2;3;4")).toBe(10);
+});
