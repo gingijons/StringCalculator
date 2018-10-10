@@ -22,6 +22,6 @@ it("should return sum of all numbers in the string", () => {
 
 it("should throw an exception", () => {
     expect(() => {
-        add("1,-5 -4 4,3-,-4 0");
+        add("-2,2,-1 -77 -7");
     }).toThrow();
 });
